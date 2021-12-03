@@ -15,7 +15,6 @@ public class QuickSort {
       for (int currentIndex = start + 1; currentIndex < end; currentIndex++) {
         int currentValue = data[currentIndex];
         if (currentValue <= pivotValue) {
-          // dividerIndex++;
           if (++dividerIndex < currentIndex) {
             data[currentIndex] = data[dividerIndex];
             data[dividerIndex] = currentValue;

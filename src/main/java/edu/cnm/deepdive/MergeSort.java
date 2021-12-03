@@ -21,13 +21,12 @@ public class MergeSort {
         int leftValue = data[leftIndex];
         int rightValue = data[rightIndex];
         if (leftValue <= rightValue) {
-          merged[mergedIndex] = leftValue;
+          merged[mergedIndex++] = leftValue;
           leftIndex++;
         } else {
-          merged[mergedIndex] = rightValue;
+          merged[mergedIndex++] = rightValue;
           rightIndex++;
         }
-        mergedIndex++;
       }
       if (leftIndex < midpoint) { // We know there are items remaining in the left-hand side.
         System.arraycopy(data, leftIndex, merged, mergedIndex, midpoint - leftIndex);
